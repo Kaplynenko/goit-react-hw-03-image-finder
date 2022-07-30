@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { createPortal } from 'react-dom';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
+import PropTypes from 'prop-types';
 
 
 const modalRoot = document.querySelector('#modal-root');
@@ -37,3 +38,6 @@ export default class Modal extends Component {
     );
   }
 }
+Modal.propTypes = {
+  largePicuretoModal: PropTypes.string.isRequired,
+};

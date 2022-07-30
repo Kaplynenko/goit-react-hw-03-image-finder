@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-
+import PropTypes from 'prop-types';
 const ImageGalleryItem = ({ item, handleModal })=>{
    
     return (
@@ -15,5 +15,13 @@ const ImageGalleryItem = ({ item, handleModal })=>{
       );
 }
 
+ImageGalleryItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    webformatURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+  }).isRequired,
+  handleModal: PropTypes.func.isRequired,
+};
 
 export default ImageGalleryItem;

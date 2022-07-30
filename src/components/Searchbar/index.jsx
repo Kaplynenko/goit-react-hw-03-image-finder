@@ -2,6 +2,7 @@ import { Component } from "react"
 import { toast } from 'react-toastify';
 import styles from '../Searchbar/styles.module.css'
 import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
 
 
 class Searchbar extends Component{
@@ -44,5 +45,8 @@ return(
     />
   </form>
 </header>)}}
+Searchbar.propTypes = {
+  onHandlSubmit: PropTypes.func,
+};
 
 export default Searchbar

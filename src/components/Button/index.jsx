@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
  import styles from '../Button/styles.module.css'
  const Button=({ loadMore })=> {
     return (
@@ -8,4 +9,7 @@
       </div>
     );
   }
+  Button.propTypes = {
+    loadMore: PropTypes.func.isRequired,
+  };
   export default Button;
